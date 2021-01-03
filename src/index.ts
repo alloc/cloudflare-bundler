@@ -133,14 +133,11 @@ export async function bundleWorker(config: Config) {
       return console.warn('Cannot upload Cloudflare worker without auth token')
 
     const { scriptId } = uploadConfig
-    console.info(`Cloudflare worker "${scriptId}" is being uploaded...`)
-
     try {
       await uploadScript(workerChunk.code, {
         ...uploadConfig,
         authToken,
       })
-      console.info(`Cloudflare worker "${scriptId}" was uploaded!`)
     } catch (err) {
       console.error(
         `Cloudflare worker "${scriptId}" failed to upload. ` + err.message
