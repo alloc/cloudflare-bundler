@@ -1,3 +1,16 @@
+# v0.2.1 (Sun Jan 03 2021)
+
+#### 🐛 Bug Fix
+
+- fix: ignore hidden files ([@aleclarson](https://github.com/aleclarson))
+- fix: pass absolute root to `inlineAsset` helper ([@aleclarson](https://github.com/aleclarson))
+
+#### Authors: 1
+
+- Alec Larson ([@aleclarson](https://github.com/aleclarson))
+
+---
+
 # v0.2.0 (Sun Jan 03 2021)
 
 #### 🚀 Enhancement
