@@ -173,6 +173,7 @@ function createServePlugin(root: string, config: Config): RollupPlugin {
         for (let dir in globsByDir) {
           const opts = {
             only: globsByDir[dir],
+            skip: ['.*'],
           }
           dir = path.resolve(root, dir)
           crawl(dir, opts).forEach(file =>
