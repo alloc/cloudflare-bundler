@@ -170,10 +170,12 @@ function createServePlugin(root: string, config: Config): RollupPlugin {
     load(id) {
       if (id == assetsId) {
         let lines = ['export default {']
-        for (const dir in globsByDir) {
-          crawl(path.resolve(root, dir), {
+        for (let dir in globsByDir) {
+          const opts = {
             only: globsByDir[dir],
-          }).forEach(file =>
+          }
+          dir = path.resolve(root, dir)
+          crawl(dir, opts).forEach(file =>
             lines.push(`  '${file}': ${inlineAsset(dir, file, config)},`)
           )
         }
