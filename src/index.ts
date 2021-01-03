@@ -37,7 +37,7 @@ export async function bundleWorker(config: Config) {
         throw Error(`The "main" module from package.json could not be found`)
     }
 
-    if (config.upload === true) {
+    if (config.upload === true || config.upload == null) {
       const workerInfoPath = path.join(config.root, 'wrangler.toml')
 
       if (!fs.existsSync(workerInfoPath))

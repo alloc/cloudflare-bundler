@@ -54,6 +54,8 @@ export type Config = {
    *
    * When `true`, the `root` option must be defined and its
    * `wrangler.toml` file must contain `name` and `account_id`.
+   *
+   * @default true
    */
   upload?: UploadConfig | boolean
 }
