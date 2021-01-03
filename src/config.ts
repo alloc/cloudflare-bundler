@@ -8,6 +8,8 @@ export type Config = {
    *
    * The `package.json` and `wrangler.toml` files of this directory are
    * loaded if they exist.
+   *
+   * @default process.cwd()
    */
   root?: string
   /**
@@ -31,17 +33,18 @@ export type Config = {
    * When you pass an object, its keys are used as the root
    * directory to crawl in search of paths matching the given globs.
    *
-   * The default root is the `outDir` option in your Vite config.
-   * Custom roots are resolved relative to the default root.
+   * By default, globs are relative to the `root` option.
    */
   serveGlobs?: string[] | { [root: string]: string[] }
   /**
    * Control how the script is minified.
+   *
    * @default true
    */
   minify?: TerserOptions | boolean
   /**
    * Control how `.html` modules are minified.
+   *
    * @default true
    */
   minifyHtml?: HtmlMinifyOptions | boolean
