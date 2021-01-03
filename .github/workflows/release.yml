@@ -1,0 +1,27 @@
+name: Release
+
+on: [push]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    environment: release
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow --tags
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5
+          run_install: |
+            args: [--frozen-lockfile]
+
+      - run: pnpx auto shipit
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
