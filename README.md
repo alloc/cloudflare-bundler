@@ -51,8 +51,8 @@ yarn add -D cloudflare-bundler
   by this plugin) in your script to easily serve the bundled content with the
   proper response headers (`ETag`, `Content-Type`, `Content-Length`).  
 
-  When an array is passed, both the `outDir` (from vite.config.js) and the 
-  worker-specific `root` directory are searched for matching paths.
+  When an array is passed, the globs are relative to the `root` option (or
+  the working directory if `root` is undefined).
 
 - `minify?: object | boolean`  
   Customize how the script is minified, or pass `false` to disable minification.
