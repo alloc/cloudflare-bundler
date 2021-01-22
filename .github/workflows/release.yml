@@ -21,7 +21,7 @@ jobs:
           run_install: |
             args: [--frozen-lockfile]
 
-      - run: pnpx auto@10.5 shipit
+      - run: pnpx -p @auto-canary/auto@10.5.1-canary.1701.20906.0 auto shipit
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
