@@ -4,7 +4,6 @@ dependencies:
   '@types/html-minifier': 4.0.0
   axios: 0.21.0
   esbuild: 0.8.0
-  etag: 1.8.1
   html-minifier: 4.0.0
   recrawl-sync: 2.0.0
   rollup: 2.35.1
@@ -833,12 +832,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
-  /etag/1.8.1:
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
   /execa/4.1.0:
     dependencies:
       cross-spawn: 7.0.3
@@ -2494,7 +2487,6 @@ specifiers:
   '@types/html-minifier': ^4.0.0
   axios: ^0.21.0
   esbuild: ^0.8.0
-  etag: ^1.8.1
   html-minifier: ^4.0.0
   prettier: ^2.0.5
   recrawl-sync: ^2.0.0
