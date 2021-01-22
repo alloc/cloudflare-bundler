@@ -12,8 +12,9 @@ dependencies:
   strip-bom: 4.0.0
   toml: 3.0.0
 devDependencies:
-  '@auto-it/conventional-commits': 10.5.0
+  '@auto-it/conventional-commits': /@auto-canary/conventional-commits/10.5.1-canary.1701.20906.0
   '@auto-it/magic-zero': /@auto-canary/magic-zero/10.5.1-canary.1701.20906.0
+  '@auto-it/npm': /@auto-canary/npm/10.5.1-canary.1701.20906.0
   '@rollup/plugin-typescript': 6.1.0_rollup@2.35.1+typescript@4.0.5
   '@types/etag': 1.8.0
   prettier: 2.1.2
@@ -27,6 +28,18 @@ packages:
       node: '>=10.x'
     resolution:
       integrity: sha512-/9fFmcPrhr2W6BDbMxUUoYhWVezMxc2bc62os8IH2EFan8GMbrON3bHF6bdpnOHlf4hL4q0DVcHZBcFxuy8gUg==
+  /@auto-canary/conventional-commits/10.5.1-canary.1701.20906.0:
+    dependencies:
+      '@auto-canary/core': 10.5.1-canary.1701.20906.0
+      conventional-changelog-core: 4.2.2
+      conventional-changelog-preset-loader: 2.3.4
+      conventional-commits-parser: 3.2.0
+      fp-ts: 2.9.3
+      io-ts: 2.2.13_fp-ts@2.9.3
+      tslib: 2.0.3
+    dev: true
+    resolution:
+      integrity: sha512-bcBHW9mixZ2KnOSScNynK2FkZQa1qMTSqHT46Jqtnfsx3kxGym4uyQe43Aq/Kxw+wyLa4nGpSxjp+cgNLshnpg==
   /@auto-canary/core/10.5.1-canary.1701.20906.0:
     dependencies:
       '@auto-canary/bot-list': 10.5.1-canary.1701.20906.0
@@ -78,65 +91,33 @@ packages:
     dev: true
     resolution:
       integrity: sha512-U6NK8lyyulZB3n5CCVM1T2svpqmcvgKxvbV6LWE3E4brYam0ZtRaAvgY38toGd/19Fjt1AhSh5gFUqG8tssdjA==
-  /@auto-it/bot-list/10.5.0:
+  /@auto-canary/npm/10.5.1-canary.1701.20906.0:
+    dependencies:
+      '@auto-canary/core': 10.5.1-canary.1701.20906.0
+      '@auto-canary/package-json-utils': 10.5.1-canary.1701.20906.0
+      await-to-js: 2.1.1
+      env-ci: 5.0.2
+      fp-ts: 2.9.3
+      get-monorepo-packages: 1.2.0
+      io-ts: 2.2.13_fp-ts@2.9.3
+      registry-url: 5.1.0
+      semver: 7.3.4
+      tslib: 2.0.3
+      typescript-memoize: 1.0.0-alpha.4
+      url-join: 4.0.1
+      user-home: 2.0.0
+    dev: true
+    resolution:
+      integrity: sha512-DA7o2l08Cg3R9t1iJMoR5Ikqd3UU+GBFt0Z7BoVHHvvdsegEA4Oq30BCTp1nX3tjoIwm7D3m+KI+ksQC5sHxMA==
+  /@auto-canary/package-json-utils/10.5.1-canary.1701.20906.0:
+    dependencies:
+      parse-author: 2.0.0
+      parse-github-url: 1.0.2
     dev: true
     engines:
       node: '>=10.x'
     resolution:
-      integrity: sha512-D9F4qLEApjiOjVIgJlYTh/qOugBZIXU7fPSqNvXdbbzfH8i3dsLSlxg37bzSaFpPnDfEdPWmWQAtdupCgeORTQ==
-  /@auto-it/conventional-commits/10.5.0:
-    dependencies:
-      '@auto-it/core': 10.5.0
-      conventional-changelog-core: 4.2.2
-      conventional-changelog-preset-loader: 2.3.4
-      conventional-commits-parser: 3.2.0
-      fp-ts: 2.9.3
-      io-ts: 2.2.13_fp-ts@2.9.3
-      tslib: 2.0.3
-    dev: true
-    resolution:
-      integrity: sha512-HAYWzllRgv5rgksV31N4r6t8w0DYbqriBUTdYW+VY+MwAfIG3pWUjfjXd10Cz9z94qYtZpBmXD2piUwa6Q4OMA==
-  /@auto-it/core/10.5.0:
-    dependencies:
-      '@auto-it/bot-list': 10.5.0
-      '@octokit/plugin-enterprise-compatibility': 1.2.8
-      '@octokit/plugin-retry': 3.0.6
-      '@octokit/plugin-throttling': 3.3.4
-      '@octokit/rest': 18.0.12
-      await-to-js: 2.1.1
-      chalk: 4.1.0
-      cosmiconfig: 7.0.0
-      deepmerge: 4.2.2
-      dotenv: 8.2.0
-      endent: 2.0.1
-      enquirer: 2.3.6
-      env-ci: 5.0.2
-      fast-glob: 3.2.4
-      fp-ts: 2.9.3
-      fromentries: 1.3.2
-      gitlog: 4.0.3
-      https-proxy-agent: 5.0.0
-      import-cwd: 3.0.0
-      import-from: 3.0.0
-      io-ts: 2.2.13_fp-ts@2.9.3
-      lodash.chunk: 4.2.0
-      log-symbols: 4.0.0
-      node-fetch: 2.6.1
-      parse-author: 2.0.0
-      parse-github-url: 1.0.2
-      pretty-ms: 7.0.1
-      semver: 7.3.4
-      signale: 1.4.0
-      tapable: 2.2.0
-      terminal-link: 2.1.1
-      tinycolor2: 1.4.2
-      tslib: 2.0.3
-      type-fest: 0.18.1
-      typescript-memoize: 1.0.0-alpha.4
-      url-join: 4.0.1
-    dev: true
-    resolution:
-      integrity: sha512-OYXOTcvHUTrVdCVoxjOFFsRzpItCBriGLhd42NQw59WS0txc9kKKRbPHRySoafPDyb+YeD4w34/1R/eKVTGYdw==
+      integrity: sha512-8kvUmCE9pe0zjVM1fANJWYzJLfr0naFKGa7HoEyB2ho/0ZBGbJYQCBZ4uiN+Rs96+p8brcDfY/h7u+0333zrlw==
   /@babel/code-frame/7.10.4:
     dependencies:
       '@babel/highlight': 7.10.4
@@ -500,6 +481,20 @@ packages:
     dev: true
     resolution:
       integrity: sha1-nlKHYrSpBmrRY6aWKjZEGOlibs4=
+  /array-union/1.0.2:
+    dependencies:
+      array-uniq: 1.0.3
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-mjRBDk9OPaI96jdb5b5w8kd47Dk=
+  /array-uniq/1.0.3:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-r2rId6Jcx/dOBYiUdThY39sk/bY=
   /arrify/1.0.1:
     dev: true
     engines:
@@ -812,6 +807,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
+  /deep-extend/0.6.0:
+    dev: true
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
   /deepmerge/4.2.2:
     engines:
       node: '>=0.10.0'
@@ -821,6 +822,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==
+  /dir-glob/2.2.2:
+    dependencies:
+      path-type: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-f9LBi5QWzIW3I6e//uxZoLBlUt9kcp66qo0sSCxL6YZKc75R1c4MFCoe/LaZiBGmgujvQdxc5Bn3QhfyvK5Hsw==
   /dot-prop/5.3.0:
     dependencies:
       is-obj: 2.0.0
@@ -1002,6 +1011,13 @@ packages:
   /function-bind/1.1.1:
     resolution:
       integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+  /get-monorepo-packages/1.2.0:
+    dependencies:
+      globby: 7.1.1
+      load-json-file: 4.0.0
+    dev: true
+    resolution:
+      integrity: sha512-aDP6tH+eM3EuVSp3YyCutOcFS4Y9AhRRH9FAd+cjtR/g63Hx+DCXdKoP1ViRPUJz5wm+BOEXB4FhoffGHxJ7jQ==
   /get-pkg-repo/1.4.0:
     dependencies:
       hosted-git-info: 2.8.8
@@ -1097,6 +1113,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
+  /globby/7.1.1:
+    dependencies:
+      array-union: 1.0.2
+      dir-glob: 2.2.2
+      glob: 7.1.6
+      ignore: 3.3.10
+      pify: 3.0.0
+      slash: 1.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-+yzP+UAfhgCUXfral0QMypcrhoA=
   /graceful-fs/4.2.4:
     dev: true
     resolution:
@@ -1185,6 +1214,10 @@ packages:
       node: '>=8.12.0'
     resolution:
       integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
+  /ignore/3.3.10:
+    dev: true
+    resolution:
+      integrity: sha512-Pgs951kaMm5GXP7MOvxERINe3gsaVjUWFm+UZPSq9xYriQAksyhg0csnS0KXSNRD5NmNdapXEpjxG49+AKh/ug==
   /import-cwd/3.0.0:
     dependencies:
       import-from: 3.0.0
@@ -1668,6 +1701,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
+  /os-homedir/1.0.2:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
   /p-limit/1.3.0:
     dependencies:
       p-try: 1.0.0
@@ -1923,6 +1962,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+  /rc/1.2.8:
+    dependencies:
+      deep-extend: 0.6.0
+      ini: 1.3.8
+      minimist: 1.2.5
+      strip-json-comments: 2.0.1
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
   /read-pkg-up/1.0.1:
     dependencies:
       find-up: 1.1.2
@@ -2038,6 +2087,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==
+  /registry-url/5.1.0:
+    dependencies:
+      rc: 1.2.8
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8acYXXTI0AkQv6RAOjE3vOaIXZkT9wo4LOFbBKYQEEnnMNBpKqdUrI6S4NT0KPIo/WVvJ5tE/X5LF/TQUf0ekw==
   /relateurl/0.2.7:
     dev: false
     engines:
@@ -2192,6 +2249,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-iuh+gPf28RkltuJC7W5MRi6XAjTDCAPC/prJUpQoG4vIP3MJZ+GTydVnodXA7pwvTKb2cA0m9OFZW/cdWy/I/w==
+  /slash/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
   /source-map-support/0.5.19:
     dependencies:
       buffer-from: 1.1.1
@@ -2305,6 +2368,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
+  /strip-json-comments/2.0.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
   /strip-json-comments/3.1.1:
     dev: false
     engines:
@@ -2490,6 +2559,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
+  /user-home/2.0.0:
+    dependencies:
+      os-homedir: 1.0.2
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-nHC/2Babwdy/SGBODwS4tJzenp8=
   /util-deprecate/1.0.2:
     dev: true
     resolution:
@@ -2541,8 +2618,9 @@ packages:
     resolution:
       integrity: sha512-WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA==
 specifiers:
-  '@auto-it/conventional-commits': ^10.5.0
+  '@auto-it/conventional-commits': 'npm:@auto-canary/conventional-commits@10.5.1-canary.1701.20906.0'
   '@auto-it/magic-zero': 'npm:@auto-canary/magic-zero@10.5.1-canary.1701.20906.0'
+  '@auto-it/npm': 'npm:@auto-canary/npm@10.5.1-canary.1701.20906.0'
   '@cloudflare/workers-types': ^2.1.0
   '@rollup/plugin-node-resolve': ^10.0.0
   '@rollup/plugin-typescript': ^6.1.0

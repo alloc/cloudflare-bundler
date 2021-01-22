@@ -31,8 +31,9 @@
     "toml": "^3.0.0"
   },
   "devDependencies": {
-    "@auto-it/conventional-commits": "^10.5.0",
+    "@auto-it/conventional-commits": "npm:@auto-canary/conventional-commits@10.5.1-canary.1701.20906.0",
     "@auto-it/magic-zero": "npm:@auto-canary/magic-zero@10.5.1-canary.1701.20906.0",
+    "@auto-it/npm": "npm:@auto-canary/npm@10.5.1-canary.1701.20906.0",
     "@rollup/plugin-typescript": "^6.1.0",
     "@types/etag": "^1.8.0",
     "prettier": "^2.0.5",
