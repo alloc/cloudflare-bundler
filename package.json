@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "^10.5.0",
+    "@auto-it/magic-zero": "npm:@auto-canary/magic-zero@10.5.1-canary.1701.20906.0",
     "@rollup/plugin-typescript": "^6.1.0",
     "@types/etag": "^1.8.0",
     "prettier": "^2.0.5",
@@ -47,6 +48,7 @@
   "auto": {
     "plugins": [
       "npm",
+      "magic-zero",
       "conventional-commits"
     ]
   }
