@@ -1,4 +1,3 @@
-import etag from 'etag'
 import axios from 'axios'
 import { UploadConfig } from './config'
 
@@ -9,24 +8,24 @@ export async function uploadScript(code: string, config: UploadConfig) {
     headers: { authorization: 'Bearer ' + config.authToken },
   })
 
-  // 1. Check if the script changed
   const scriptsUri = `/accounts/${config.accountId}/workers/scripts`
-  const scriptsRes = (await api.get<Response<WorkerScript[]>>(scriptsUri)).data
-  if (!scriptsRes.success) {
-    throw Error(scriptsRes.errors[0].message)
-  }
-  const script = scriptsRes.result.find(script => script.id == config.scriptId)
-  if (script && script.etag == etag(code)) {
-    return // Nothing changed
-  }
 
-  // 2. Upload the script
+  /**
+   * Upload the script.
+   * @see https://api.cloudflare.com/#worker-script-upload-worker
+   */
   const scriptUri = `${scriptsUri}/${config.scriptId}`
-  return api.put(scriptUri, code, {
+  await api.put(scriptUri, code, {
     headers: {
       'content-type': 'application/javascript',
     },
   })
+
+  /**
+   * Enable the script.
+   * @see https://community.cloudflare.com/t/uploading-worker-via-v4-api-failed-to-update-route/236774/7
+   */
+  return api.post(`${scriptUri}/subdomain`, { enabled: true })
 }
 
 type Response<T> = {
