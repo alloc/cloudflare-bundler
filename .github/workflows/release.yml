@@ -21,7 +21,7 @@ jobs:
           run_install: |
             args: [--frozen-lockfile]
 
-      - run: pnpx auto shipit
+      - run: pnpx auto@10.5 shipit
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
