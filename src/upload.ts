@@ -27,14 +27,3 @@ export async function uploadScript(code: string, config: UploadConfig) {
    */
   return api.post(`${scriptUri}/subdomain`, { enabled: true })
 }
-
-type Response<T> = {
-  result: T
-  success: boolean
-  errors: { code: number; message: string }[]
-}
-
-type WorkerScript = {
-  id: string
-  etag: string
-}
